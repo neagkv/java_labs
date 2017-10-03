@@ -4,39 +4,192 @@ Answer the following questions
 
 1) What is an instance variable?
 
+    a variable declared inside a class but outside a method. The describe the class
+
+    --> a variable that describes the class itself, a variable that is declared at the class level, before any method
+
 2) How do you create a new object?
+
+    Object a = new Object();
+
+    --> className variableName = new ClassName();
+    - Car andreaCar = new Car();
+
 
 3) After creating a new object, how do you set that objects instance variables?
 
+    a.instanceVariable = 0;
+
+    --> two ways:
+    #1) objectName.variableName=value;
+    -andreaCar.color = "blue";
+
+    #2) use a setter method
+    -andreaCar.setColor("blue");
+
+
 4) What is a reference variable? Why do you need to be careful with reference variables?
 
+    A a reference variable is the only way you can access and object. It is declared a certain type, and that type can never change
+--> a reference variable is an object. When you pass an object to another method (methodB) as an argument, methodB does not get it's own copy of the object, it gets a reference to object. In this case the object in both methodA and methodB are pointing to the same exact place/object in memory.
+Any change that happenes to the object (referebce variable) in methodB will carry over to the object in methodB returns that object to method A.
+
+
 5) How many methods can you have in a class?
+    you can have unlimited methods in a class. There must be at least one  main method to start an application
+    --> more or less infinite (only bound by largest int)
 
 6) How do you exit a method at any point?
 
+    return:
+--> if a void method use return
+    if a the method has non-void return type use return <variabke of returnTyoe
+    ie, return a *b;
+
+
+
 7) What is the method signature required to return an "int" from a method?
+
+
+
+
+ int a = method(1 ,2);
+
+ --> public int someMethod(<optional args>){...}
+
 
 8) Assuming "int num = 10", what is the syntax to return "num" from a method?
 
+    public int method();
+
+    -->you pass parameters to method (that require parameters) in the parenthesis
+    ie, int x = objectName.multiply(10, 20);
+    -10 and 20 in the line above are parameters being passed to the multiply method (which requires two parameters)
+
 9) How do you pass a parameter to a method?
+
+    inside the parentheses that follow the methods name
+
+    --> you pass parameters to method (that require parameters) in the paranthesis
+    ie int x = object Name.multiply (10, 20);
+    --10 and 20  in the line above are parameters being passed to the multiply method (which requires two parameters)
 
 10) What is the method signature for a method named sum() that takes two int parameters
     and returns their sum as in int?
 
+
+-> public int sum(int a, int b) {}
+int x = sum(8, 9):
+
 11) What is a constructor?
+    it initializes an object when it is created
+
+    --> a constructors create objects
+    --> if you do not define a custom constructor Java will provide
+    constructor for you
 
 12) How does Java treat a class without a constructor?
+    java automatically provides a default constructor of zero, null and false for numeric types, reference types and booleans types
 
+    -->
+
+    class Painting{
+    Painting(){} // <--default constructor --java creates tghis behind the scenes if you do not create
+    }
 13) What would the constructor for "public class Animal" look like?
 
+
+    Animal() {
+    statement;
+    }
+
 14) What is the effect of passing parameters to a constructor?
+    it automatically adds the arugments  to each respective instance variable
+
+    -class Car {
+    String color;
+    String model;
+
+    Car(String color, STring model) {
+    this.color=color;
+    this.model=model;
+
+    }
+
+    }
+
+
+    // some other c;ass Car myCar = new Car("Yellow", "Mustang");
+
+
+    //without paremterized constructor you would have to:
+
+    CAr myCAr = new CAr();
+    myCar.color = "Yellow";
+    myCar.model = "Mustang";
 
 15) When should you pass parameters to a constructor?
+    when you want to create a new object of the constructors class
+
+    -- if the constructor requires parameters
+    -- if your'e writing the constructor and you want to be able to set the instance variables in the constructor
+    or set other variables or do some other task as sonn as the object is created
+
+    -Car myCAr = new Car("Yellow", "Mustang");
+
 
 16) What does the finalize() method do?
+    when you want to call a method before its final destruction by the garbage collection
+--> the finalize() method is called immediately before an object is destoryed
+-- it's useful for closing connections to open files, network connections, databases etc
+
 
 17) What does the "this" keyword do?
+    refers to an objects copy of a value
+
+    -->
+
+    class Car {
+    String color;
+    String model;
+
+    Car(String color, String model) {
+    this.color =color;
+    this.model =model;
+
+    }
+    public void paint() {
+    this.color="red";
+    }
+    }
+
 
 18) When should you use the "this" keyword?
+--> you should use the this keyword usually in the constructor when you have a naming conflict between the instance variabel (ie, color)
+and the constructor parameter (ie, color)
+
+when you want to gain access to hidden instance variables
 
 19) Write an example of the "this" keyword in action.
+
+--> see above exampple
+20.) EXplain the difference between static and non-static variables.
+
+--> a static variable is hsared by all instances of a class -- for instance "numCarsCreated" - if thats's a stsitc variable - each and every
+object created from Car calass has shared access to that variable - if that variable currently hilds "4". Static variables are shared across all
+instances of a class - no matter how many objects.instances you create of that class.
+-- a non sttaic variable belongs to the instance/object - for instance birthday is a great example of a non static varibale becuase each ista
+instance/object of the Person class hsouyl have their own copy of that variabvel that they can modify and change accordingly based onb their in
+indvividual boirthday. Phone number, pobox street adresss emial adress -- these are all non static variables that should not be shared
+across every instance. onject of the person class that has beeen created
+
+
+21.) Explain the difference between static and non-static methods.
+
+--> a non-static method can only be accessed (from another class) by creared an object of the class containing the non-static nethod and using
+that object to call the non0static method. For instatncem assume that Car ckass has a nin0static method called accerlerate().
+Car myNewCar = new Car ();
+myNewCar.accelerate(); // <- using the object "myNewCar" to invoke the method "accelerate"
+objectNAme.methodName()
+-a static method is require when yiu need to call a method inside a class before an object of that class has benn or can be created. For
+instance the main() method. It simoly calls it ysing "ClassNAme.nmain()"

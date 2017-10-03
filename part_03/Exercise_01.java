@@ -13,3 +13,107 @@ package part_03;
 
  **/
 
+class Herring { //class
+
+
+    int width; //instance variables
+    int forkLength;
+    int caudaulLength;
+
+    Herring(int w, int fL, int cL) { //constructor
+
+        width = w;
+        forkLength = fL;
+        caudaulLength = cL;
+    }
+
+    public static void main(String[] args) { //main method
+        Herring alewife = new Herring(2, 5, 7); // construct new Herring
+        Herring blueback = new Herring(2, 6, 8);
+        Herring atlantic = new Herring(3, 6, 8);
+
+        Groundfish cod = new Groundfish(3, 5, 8);
+        cod.width = 7;
+        cod.setWidth(9);
+        cod.setForkLength(6);
+        //cod.forklength=6; could not run this way because forklength is private
+
+        Groundfish pollock = new Groundfish (4, 7);
+        pollock.setCaudaulLength(8);
+    }
+
+    int diffInLength() {    //second method
+        return (caudaulLength - forkLength);
+    }
+}
+
+
+class Groundfish { //class
+
+    int width; //instance variables
+    private int forkLength;
+    int caudaulLength;
+
+    Groundfish(int width, int forkLength) {
+        this.width = width;
+        this.forkLength = forkLength;
+    }
+
+    Groundfish(int w, int fL, int cL) { //constructor
+
+        width = w;
+        forkLength = fL;
+        caudaulLength = cL;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getForkLength() {
+        return forkLength;
+    }
+
+    public void setForkLength(int forkLength) {
+        this.forkLength = forkLength;
+    }
+
+    public int getCaudaulLength() {
+        return caudaulLength;
+    }
+
+    public void setCaudaulLength(int caudaulLength) {
+        this.caudaulLength = caudaulLength;
+    }
+}
+
+class Hakes {
+
+
+    int width; //instance variables
+    int forkLength;
+    int caudaulLength;
+
+
+    Hakes(int w, int fL, int cL) { //constructor
+
+        width = w;
+        forkLength = fL;
+        caudaulLength = cL;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+

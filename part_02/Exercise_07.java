@@ -35,7 +35,6 @@ public class Exercise_07 {
 
     }
 
-
 //double minsOfaYear = 365*24*60;
 //double year = mins / minsOfaYear;
   //  double day = (mins % minsOfaYear)/(24*60);
