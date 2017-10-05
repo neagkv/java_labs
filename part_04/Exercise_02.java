@@ -8,3 +8,32 @@ package part_04;
 
  */
 
+public class Exercise_02 {
+
+    public static void main(String[] strings) {
+
+        int length = 17;
+        int[] ar = new int[length];
+
+
+
+        for (int i=0; i <length;) {
+
+            ar[i] = ++i;
+
+        }
+
+        for (int i = ar.length -1; i >=0; i--) {
+            if(i%2 ==0) {
+                System.out.println(ar[i]);
+
+
+
+            }
+
+        }
+
+    }
+}
+
+
