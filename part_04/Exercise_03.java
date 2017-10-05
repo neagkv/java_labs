@@ -17,12 +17,24 @@ public class Exercise_03 {
     public static void main(String[] strings) {
 
         int[][] a = new int [5][10];
+        int count=0;
 
         for(int i=0; i < a.length; i++){
-            System.out.println(a[i]);
-
+            for(int j=0; j < a[i].length; j++){
+                a[i][j] =count;
+                count++;
+            }
         }
-    }
+
+        for(int[] x: a) {
+            for (int y : x) {
+                System.out.print(y + " ");
+            }
+            System.out.println();
+        }
 
 
     }
+
+
+}

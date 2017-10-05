@@ -8,3 +8,21 @@ package part_04;
  loop to iterate through the array and print out each value.
 
  */
+
+
+public class Exercise_05 {
+
+    public static void main(String[] strings) {
+
+        int [] nums = new int [200];
+
+        for(int i=0; i < nums.length; i++){
+            nums[i] = i+1;
+        }
+
+        for(int x: nums) {
+            System.out.println(nums[x-1]);
+
+        }
+    }
+}
