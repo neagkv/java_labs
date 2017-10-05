@@ -38,16 +38,17 @@ public class Exercise_01 {
             }
         }
 
-        for (int i =9; i < a.length; i=-2);
-            if (i % 2 ==0) {
+
+        for (int i = (a.length -1); i >=  0; i--) {
+            if (i %2 ==0) {
                 System.out.println(a[i]);
-
-
+            }
+        }
             }
 
 
         }
-    }
+
 
 
 

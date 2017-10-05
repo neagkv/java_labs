@@ -11,3 +11,18 @@ package part_04;
  40 41 42 43 44 45 46 47 48 49
 
  */
+
+public class Exercise_03 {
+
+    public static void main(String[] strings) {
+
+        int[][] a = new int [5][10];
+
+        for(int i=0; i < a.length; i++){
+            System.out.println(a[i]);
+
+        }
+    }
+
+
+    }
