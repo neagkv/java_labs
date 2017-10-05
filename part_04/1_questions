@@ -3,47 +3,131 @@ Answer the following questions:
 
 1) What is an array?
 
+    a container object that holds a fixed number number of objects of a certain type
+
 2) What the code required to create (instantiate) a String array with size 10 named "cats"?
+
+        int [] cats = new int [10]
 
 3) What is a multidimensional array?
 
+        an array of arrays
+
 4) What is the code required to create (instantiate) a 2-dimensional int array that is 6 high and 6 wide named "scores"?
+
+            int[][] scores = new int[6][6];
+
 
 5) Using code, how do you retrieve a String that is the 10th item in a traditional array named dogs?
 
+            String [9] dogs = new String [9]
+
 6) What is an ArrayIndexOutOfBoundsException?
+
+        when you are trying to access and illegel index of an array, greater than the size of the array of useing a negative number
+
 
 7) Using one line of code, demonstrate how to retrieve the second to the last item from a int array.
 
+            int a[a.length -2]
+
+
+
 8) What is the maximum allowable size of an array in Java?
+
+    the size of the largest int
+
 
 9) What is a bubble sort?
 
+    a sort that compares adjacent elements in an array and swaps them and repeats untill the all the elements have been placed into the correct order
+
 10) How does a bubble sort work?
+
+    look at the last question
 
 11) When might you use an irregular array? What is a good example of an irregular array?
 
+        an array that holds the # of passengers of a bus when the  bus schedule that runs 5x per week and 2x on the weekends
+
+
 12) Demonstrate how to iterate through an array, printing each value, using a for loop.
+
+        for( arry i =0; i<=length.arry; i++) { sout(i)}
 
 13) Demonstrate how to iterate through an array, printing each value, using a while loop.
 
+        while(i<length.arry) {System.out.println(i);}
+
+
 14) What is a queue?
+
+
+         a first in first out way to arrange elememts in java
+
+
 
 15) What are the two primary operations that a queue performs?
 
+        add and remove an item from a list
+
+
+
 16) What is a stack?
+
+            last in first out
+
 
 17) What differentiates stacks and queues?
 
+            queue is first in first out
+
+            stack is last in first out
+
 18) When would you use an enhanced for loop?
+
+        when you want to iterate through all the elements of an array
 
 19) What is "The Collections Framework"? What classes does it include?
 
+        a library that holds a collection of classes with reusable data structers
+
 20) How do you iterate over a two-dimensional array? Demonstrate using psuedo code.
+
+             int[][] board = new int[4][4]; // let's loop through array to populate board
+             for (int row = 0; row < board.length; row++)
+             { for (int col = 0; col < board[row].length; col++)
+            { board[row][col] = row * col; } }
+
+
+
 
 21) What is a String?
 
+                 an immutable sequence of characters
+
 22) What are a few common methods for operating on Strings?
+
+            string.length;
+            string1.concat(string2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 23) What does "Strings are immutable" mean?
 
