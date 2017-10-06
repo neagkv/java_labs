@@ -1,5 +1,7 @@
 package part_04;
 
+import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
+
 /**
 
  Implement, and populate a non-circular, consumptive queue (once a value has been retrieved
@@ -12,29 +14,52 @@ package part_04;
 
 public class Exercise_06 {
 
-    char queue[]; // this array holds the queue
-    int putloc, getloc; // the put and get indices
+    public static void main(String[] args) {
 
-    Queue(int size) {
-        q = new char[size]; // allocate memory for queue
-        putloc = getloc = 0;
+    Queue test = new Queue(101);
+
+    for (int i =0; i <test.size(); i++) {
+        test.put(i);
     }
 
-    // put a character into the queue
-    void put(char ch) {
-        if(putloc ==q.length) {
-            System.out.println("- Queue is full");
-            return;
+
+    for (int i ==0; i <test.size(); i++) {
+        if(i%2==0) {
+            System.out.println(test.get());
+        } else if (i%2 !=0) {
+            test.get();
         }
-        q[putloc++] = ch;
-
+        }
     }
-
 }
 
-    // Demonstarte the Queue class.
-class QDemo {
-    public static void main(String args[]) {
-        Queue big
+class Queue {
+
+    private int [] q;
+    private int putLocation, getLocation;
+
+
+    Queue (int a){
+        q = new int[a];
+        putLocation = getLocation =0;
     }
+
+    public void put(int num) {
+        if (putLocation ==q.length) {
+            System.out.println("Queue is full");
+            return;
+        }
+        q[putLocation++] = num;
+        return;
     }
+    public int get() {
+        if (getLocation==putLocation) {
+            System.out.println("Spot is empty");
+            return 0;
+        }
+        return q[getLocation++];
+    }
+    public int size(){
+        return q.length;
+    }
+}
