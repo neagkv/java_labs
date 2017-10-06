@@ -2,14 +2,23 @@
 Answer the following:
 
 1) What are the access control modifiers (acm) provided in Java?
-
+    public private and proctected
 2) Briefly explain each acm and how they differentiate from each other?
+
+    the protected modifier applies only when inheritance is involved
+    the methods in other classes cannot acess a private member of another class
 
 3) Why do we use acm's?
 
+    to prevent access to private data.
+
 4) What is the risk of not using acm's?
 
+    improper  data can be assigned
+
 5) Write a method signature that receives an object of type "Car" as a parameter.
+
+
 
 6) Write a method signature that returns an object of type "Car".
 
