@@ -16,50 +16,53 @@ public class Exercise_06 {
 
     public static void main(String[] args) {
 
-    Queue test = new Queue(101);
+        Queue test = new Queue(101);
 
-    for (int i =0; i <test.size(); i++) {
-        test.put(i);
-    }
-
-
-    for (int i ==0; i <test.size(); i++) {
-        if(i%2==0) {
-            System.out.println(test.get());
-        } else if (i%2 !=0) {
-            test.get();
+        for(int i=0; i<test.size(); i++){               //populates from 0 to 100
+            test.put(i);                                //puts into queue
         }
+
+        for (int i =0; i <test.size(); i++){
+            if(i%2==0) {
+                System.out.println(test.get());
+            } else if (i%2 !=0) {
+                test.get();
+            }
         }
-    }
-}
 
-class Queue {
-
-    private int [] q;
-    private int putLocation, getLocation;
-
-
-    Queue (int a){
-        q = new int[a];
-        putLocation = getLocation =0;
     }
 
-    public void put(int num) {
-        if (putLocation ==q.length) {
-            System.out.println("Queue is full");
+
+    static class Queue {
+
+        private int[] q;                          //this array holds the q
+        private int putLocation, getLocation;       // the put and get indices
+
+
+        Queue(int size) {
+            q = new int[size];                     // allocate memory for the queue
+            putLocation = getLocation = 0;
+        }
+
+        public void put(int num) {
+            if (putLocation == q.length) {
+                System.out.println("-Queue is full");
+                return;
+            }
+            q[putLocation++] = num;
             return;
         }
-        q[putLocation++] = num;
-        return;
-    }
-    public int get() {
-        if (getLocation==putLocation) {
-            System.out.println("Spot is empty");
-            return 0;
+
+        public int get() {
+            if (getLocation == putLocation) {
+                System.out.println("-Queue is empty");
+                return 0;
+            }
+            return q[getLocation++];
         }
-        return q[getLocation++];
-    }
-    public int size(){
-        return q.length;
+
+        public int size() {
+            return q.length;
+        }
     }
 }
