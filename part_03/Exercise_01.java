@@ -20,6 +20,9 @@ class Herring { //class
     int forkLength;
     int caudaulLength;
 
+
+
+
     Herring(int w, int fL, int cL) { //constructor
 
         width = w;
@@ -27,7 +30,7 @@ class Herring { //class
         caudaulLength = cL;
     }
 
-    public static void main(String[] args) { //main method
+    public static void main(String[] args) { //main method .. usually would not construct
         Herring alewife = new Herring(2, 5, 7); // construct new Herring
         Herring blueback = new Herring(2, 6, 8);
         Herring atlantic = new Herring(3, 6, 8);
@@ -37,9 +40,15 @@ class Herring { //class
         cod.setWidth(9);
         cod.setForkLength(6);
         //cod.forklength=6; could not run this way because forklength is private
-
         Groundfish pollock = new Groundfish (4, 7);
         pollock.setCaudaulLength(8);
+
+        Hakes white = new Hakes (7, 8, 10);
+        white.setWidth(15);
+        System.out.println(white.getWidth());
+        int a =white.getWidth();
+        System.out.println(a);
+
     }
 
     int diffInLength() {    //second method
@@ -53,6 +62,9 @@ class Groundfish { //class
     int width; //instance variables
     private int forkLength;
     int caudaulLength;
+    Groundfish(){
+                            //is is also a constructor
+    }
 
     Groundfish(int width, int forkLength) {
         this.width = width;
@@ -94,7 +106,7 @@ class Groundfish { //class
 class Hakes {
 
 
-    int width; //instance variables
+    private int width; //instance variables
     int forkLength;
     int caudaulLength;
 
@@ -106,7 +118,29 @@ class Hakes {
         caudaulLength = cL;
     }
 
+    public int getWidth() {
+        return width;
+    }
 
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getForkLength() {
+        return forkLength;
+    }
+
+    public void setForkLength(int forkLength) {
+        this.forkLength = forkLength;
+    }
+
+    public int getCaudaulLength() {
+        return caudaulLength;
+    }
+
+    public void setCaudaulLength(int caudaulLength) {
+        this.caudaulLength = caudaulLength;
+    }
 }
 
 

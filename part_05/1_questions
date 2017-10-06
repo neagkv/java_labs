@@ -2,11 +2,13 @@
 Answer the following:
 
 1) What are the access control modifiers (acm) provided in Java?
+
     public private and proctected
+
 2) Briefly explain each acm and how they differentiate from each other?
 
     the protected modifier applies only when inheritance is involved
-    the methods in other classes cannot acess a private member of another class
+    the methods in other classes cannot access a private member of another class
 
 3) Why do we use acm's?
 
@@ -18,30 +20,59 @@ Answer the following:
 
 5) Write a method signature that receives an object of type "Car" as a parameter.
 
-
+    public static void myMeth (car a);
 
 6) Write a method signature that returns an object of type "Car".
+
+    public static car a myMeth ();
 
 7) What is a very important consideration to keep in mind when passing objects (hint: by reference) from one
 method to another?
 
+    a new object is not created, it is just reffering to the previous object
+
 8) What is method overloading?
+
+    when two or methods in the same class have the same name, but different parameters
 
 9) Why is method overloading useful? (Hint: as compared to the implementation in the C language.)
 
+       it allows related methods to be accessed by use of a common name
+
 10) How do you overload a method? What signifies that a method is being overloaded?
+
+    a method will have the same name as another method but will have different parameter types or different number
+    of parameters
+
 
 11) Below, by writing just the method signature, demonstrate overloading a method 3 times.
 
+    void myMeth(){}
+    void myMeth(int a) {}
+    void myMeth(int a, int b) {}
+
 12) How do you overload a constructor? What signifies that a constructor is being overloaded?
+
+    just like a regular method. The methods name will be capitalized and will and take different parameters
 
 13) Why do we overload constructors?
 
+    it allows you to construct objects in a variety of ways
+
 14) Below, by writing just the constructor signature, demonstrate overloading a constructor 3 times.
+
+    MyClass(){}
+    MyClass(int a){}
+    MyClass(double a){}
+    MyClass(int a, int b){}
 
 15) What is recursion?
 
+    a method that call itself
+
 16) What important considerations must you keep in mind when using recursion?
+
+    
 
 17) How do you make a method recursive?
 
