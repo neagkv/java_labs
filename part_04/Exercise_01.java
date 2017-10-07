@@ -22,23 +22,23 @@ public class Exercise_01 {
     public static void main(String[] strings) throws java.io.IOException {
         Scanner input = new Scanner(System.in);
 
-        int a[] = new int[10];
+        int a[] = new int[10];       //declares a new 10 element array object
 
 
         for (int i = 0; i < 10; i++) {
-            a[i] = input.nextInt();
+            a[i] = input.nextInt();  //set the index of the array at 0-10 to the user input
         }
 
-        for (int i = 0; i < a.length; i++) {
-            if (i % 2 != 0) {
-                System.out.println(a[i]);
+        for (int i = 0; i < a.length; i++) {  //another for loop that set the index of the array at 0-10
+            if (i % 2 != 0) {                  //if index is not divisible by two
+                System.out.println(a[i]);      // print out the odd number index in ascending order
             }
         }
 
 
-        for (int i = (a.length -1); i >=  0; i--) {
-            if (i %2 ==0) {
-                System.out.println(a[i]);
+        for (int i = (a.length -1); i >=  0; i--) {  //a for loop that takes the lenght of the array -1(index) and counts down to 0
+            if (i %2 ==0) {                          // if the index is divisible by 0
+                System.out.println(a[i]);  // prints the even number index in descending order
             }
         }
             }

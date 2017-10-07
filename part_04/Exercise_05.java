@@ -14,14 +14,14 @@ public class Exercise_05 {
 
     public static void main(String[] strings) {
 
-        int [] nums = new int [200];
+        int [] nums = new int [200];        // creates a new int array 200 elements long
 
-        for(int i=0; i < nums.length; i++){
+        for(int i=0; i < nums.length; i++){ //populates the array
             nums[i] = i+1;
         }
 
-        for(int x: nums) {
-            System.out.println(nums[x-1]);
+        for(int x: nums) {                   // for each value x along the nums array
+            System.out.println(nums[x-1]);   // print the value of x-1 which is the index
 
         }
     }

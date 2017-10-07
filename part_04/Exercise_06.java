@@ -16,13 +16,13 @@ public class Exercise_06 {
 
     public static void main(String[] args) {
 
-        Queue test = new Queue(101);
+        Queue test = new Queue(101);                // creates a new Queue object with size 101
 
         for(int i=0; i<test.size(); i++){               //populates from 0 to 100
             test.put(i);                                //puts into queue
         }
 
-        for (int i =0; i <test.size(); i++){
+        for (int i =0; i <test.size(); i++){           
             if(i%2==0) {
                 System.out.println(test.get());
             } else if (i%2 !=0) {
