@@ -8,3 +8,16 @@ package part_05;
  * flow of execution and the varying state of each private variable. You can name these classes whatever you want.
  *
  */
+
+
+class  StateController2 {
+
+
+}
+
+
+class State2{
+    public static void main(String[] args) {
+
+    }
+}

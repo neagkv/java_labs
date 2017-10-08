@@ -72,33 +72,65 @@ method to another?
 
 16) What important considerations must you keep in mind when using recursion?
 
-    
+    it makes the code harder to understand because you are refering to the same method more than once
 
     
 
 17) How do you make a method recursive?
 
+        returntype methodname(){
+        methodname();
+        }
+
+
 18) How do you escape a recursive method?
+
+    return;
 
 19) Explain what "static" is all about?
 
+    static memebers belong to the class instead od a specific instance ie, the math class.
+
 20) When should you use "static"?
+
+    when it would make sense to use a method before an object has been constructed. If the method is not using any instance variables
+
 
 21) What differentiates static variables from instance variables?
 
+    instance variables are associated with objects
+
 22) What is a the quicksort? Briefly describe how the quicksort works.
+
+    a fast sorting algoirthium that divides a list into two smaller sub-list and finds the low and high elements
+
+
 
 23) What is a nested, or inner, class?
 
+        a class encapsulated within another class
+
+
 24) What is the scope of a nested class?
+
+    the outerclass has access to all the variables even if they are private within the inner class
 
 25) What is a variable-arity method?
 
+    a syntax helper method that helps keep track of the number of the number of arguments in a method call
+
+
+
 26) What makes a variable-arity method unique? When should you use it?
+
+    when you are calling many methods with many differetn arguments
 
 27) What is the shorthand name for variable-arity?
 
+    Vargas
+
 28) Why important considerations must you keep in mind when using variable-arity methods? (hint: ambiguity)
 
+    it is important to keep track of all your different arguements and methods
 
 
