@@ -46,7 +46,7 @@ class StateController {
 
 
 
-        System.out.println("The area of Texas is " + tx.getArea() + " " + "and the are of New York is" + ny.getArea());
+        System.out.println("The area of Texas is " + tx.getArea() + " " + "and the area of New York is" + ny.getArea());
 
     }
 }
@@ -159,5 +159,3 @@ class County {
     }
 }
 
-//create an archicht class has  that modifies a room class and has instances of each of the following classes, art, bed, rug
-// table
