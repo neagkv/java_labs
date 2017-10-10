@@ -7,7 +7,7 @@ Answer the following questions:
 
 2) What the code required to create (instantiate) a String array with size 10 named "cats"?
 
-        int [] cats = new int [10]
+        String [] cats = new int [10]
 
 3) What is a multidimensional array?
 
@@ -20,16 +20,16 @@ Answer the following questions:
 
 5) Using code, how do you retrieve a String that is the 10th item in a traditional array named dogs?
 
-            String [9] dogs = new String [9]
+            String dogs = new String [9]
 
 6) What is an ArrayIndexOutOfBoundsException?
 
-        when you are trying to access and illegel index of an array, greater than the size of the array of useing a negative number
+        when you are trying to access and illegal index of an array, greater than the size of the array of useing a negative number
 
 
 7) Using one line of code, demonstrate how to retrieve the second to the last item from a int array.
 
-            int a[a.length -2]
+            int a = a [a.length -2]
 
 
 
@@ -40,7 +40,12 @@ Answer the following questions:
 
 9) What is a bubble sort?
 
-    a sort that compares adjacent elements in an array and swaps them and repeats untill the all the elements have been placed into the correct order
+   a very inefficient sorting algorith
+   requires a nested for loop
+   outer loop must ryab as many times ad the length of the length of the collection -1
+   inner loop compares sequential pairs and swaos them if need be
+   depending on wheter you're staring from the bottom or the top, the next smallest number
+   will bubble to the top each subsequent loop (or vice versa, largest number bubble to the bottom on each loop
 
 10) How does a bubble sort work?
 
@@ -51,31 +56,34 @@ Answer the following questions:
         an array that holds the # of passengers of a bus when the  bus schedule that runs 5x per week and 2x on the weekends
 
 
+
 12) Demonstrate how to iterate through an array, printing each value, using a for loop.
 
-        for( arry i =0; i<=length.arry; i++) { sout(i)}
+        for( int i =0; i< length.arry; i++) {
+        sout (arry[i]);
 
 13) Demonstrate how to iterate through an array, printing each value, using a while loop.
+          int i
 
-        while(i<length.arry) {System.out.println(i);}
+        while(i < length.arry) {System.out.println(arry[i); i++;}
 
 
 14) What is a queue?
 
 
-         a first in first out way to arrange elememts in java
+         its a list in which elemnets are accessed ub first-in-first-out order.
 
 
 
 15) What are the two primary operations that a queue performs?
 
-        add and remove an item from a list
+        - put and get
 
 
 
 16) What is a stack?
 
-            last in first out
+
 
 
 17) What differentiates stacks and queues?
@@ -86,25 +94,35 @@ Answer the following questions:
 
 18) When would you use an enhanced for loop?
 
-        when you want to iterate through all the elements of an array
+        when you want to iterate over every item in an collection and you don't need access to the index.
+        the for each loop
 
 19) What is "The Collections Framework"? What classes does it include?
 
-        a library that holds a collection of classes with reusable data structers
+        a library that holds a collection of classes with reusable data structures
+        it includes lists, vectors, sets and maps
 
 20) How do you iterate over a two-dimensional array? Demonstrate using psuedo code.
 
-             int[][] board = new int[4][4]; // let's loop through array to populate board
-             for (int row = 0; row < board.length; row++)
-             { for (int col = 0; col < board[row].length; col++)
-            { board[row][col] = row * col; } }
+            //assumes nums in a 2D array, ie nums [][]
+            for(int[] x : nums){
+            for(int y : x) {
+            sout(y);
+            }
+            }
 
+            for(int i = 0; i < nums.length: i++){
+            for(int j =0; j < nums[i].length; j++){
+            sout(nums[i][j];
+            }
+            }
 
 
 
 21) What is a String?
 
                  an immutable sequence of characters
+                 an object type not a primative type
 
 22) What are a few common methods for operating on Strings?
 
@@ -113,22 +131,10 @@ Answer the following questions:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 23) What does "Strings are immutable" mean?
 
 24) Using the CLI, how do you invoke a Java application and provide two parameters to the main method?
+
+
+        # javac ClassName.java
+        # java ClassName arg 1 arg 2

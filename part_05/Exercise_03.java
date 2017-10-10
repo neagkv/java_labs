@@ -65,6 +65,8 @@ class Movie_Creator{
 
     public static void main(String[] args) {
 
+        Movie_Creator creator = new Movie_Creator();
+
          Movies star_wars = new Movies();
          Movies lion_king = new Movies();
          Movies et = new Movies();
@@ -84,24 +86,24 @@ class Movie_Creator{
 
 
 
-        setMovieDetails(et);
-        setMovieDetails(star_wars, 2500000);
-        setMovieDetails(the_Matrix, 'R');
+        creator.setMovieDetails(et);
+        creator.setMovieDetails(star_wars, 2500000);
+        creator.setMovieDetails(the_Matrix, 'R');
 
         System.out.println("1st pass Lion King: Year" + " " + lion_king.getYear() + " Longer than 2 hours(Y/N):" +
                 lion_king.isLonger_2hrs() + " Views:" + lion_king.getViews() + " Budget:" + lion_king.getBudget());
 
-        changeMovieDetails(lion_king,  1995, 10, 18, false);
+        creator.changeMovieDetails(lion_king,  1995, 10, 18, false);
 
         System.out.println("2nd pass Lion King: Year" + " " + lion_king.getYear() + " Longer than 2 hours(Y/N):" +
                 lion_king.isLonger_2hrs() + " Views:" + lion_king.getViews() + " Budget:" + lion_king.getBudget());
 
-        changeMovieDetails(lion_king, lion_king.getYear(), lion_king.getBudget(), lion_king.getViews());
+        creator.changeMovieDetails(lion_king, lion_king.getYear(), lion_king.getBudget(), lion_king.getViews());
 
         System.out.println("3rd pass Lion King: Year" + " " + lion_king.getYear() + " Longer than 2 hours(Y/N):" +
                 lion_king.isLonger_2hrs() + " Views:" + lion_king.getViews() + " Budget:" + lion_king.getBudget());
 
-        changeMovieDetails(lion_king, lion_king.getYear(), lion_king.getBudget());
+        creator.changeMovieDetails(lion_king, lion_king.getYear(), lion_king.getBudget());
 
         System.out.println("4th pass Lion King: Year" + " " + lion_king.getYear() + " Longer than 2 hours(Y/N):" +
                 lion_king.isLonger_2hrs() + " Views:" + lion_king.getViews() + " Budget:" + lion_king.getBudget());
@@ -110,7 +112,7 @@ class Movie_Creator{
 
     }
 
-    public static void setMovieDetails(Movies movie) {
+    public void setMovieDetails(Movies movie) {
         movie.setViews(25);
         movie.setBudget(8);
         movie.setLonger_2hrs(true);
@@ -118,7 +120,7 @@ class Movie_Creator{
         movie.setRating('G');
     }
 
-    public static void setMovieDetails(Movies movie, int views) {
+    public void setMovieDetails(Movies movie, int views) {
         movie.setViews(views);
         movie.setBudget(8);
         movie.setLonger_2hrs(true);
@@ -126,11 +128,11 @@ class Movie_Creator{
         movie.setRating('G');
     }
 
-    public static void setMovieDetails(Movies movie, char rating){
+    public void setMovieDetails(Movies movie, char rating){
         movie.setRating(rating);
     }
 
-    public static void changeMovieDetails(Movies movie, int year, int budget, double views, boolean longer_2hours){
+    public void changeMovieDetails(Movies movie, int year, int budget, double views, boolean longer_2hours){
         movie.setYear(year - 15);
         movie.setBudget(budget + 30);
         movie.setViews(views + 25);
@@ -138,13 +140,13 @@ class Movie_Creator{
 
     }
 
-    public static void changeMovieDetails(Movies movie, int year, int budget, double views){
+    public void changeMovieDetails(Movies movie, int year, int budget, double views){
         movie.setYear(year - 3);
         movie.setBudget(budget + 6);
         movie.setViews(views + 84);
     }
 
-    public static void changeMovieDetails(Movies movie, int year, int budget){
+    public void changeMovieDetails(Movies movie, int year, int budget){
         movie.setYear(year - 18);
         movie.setBudget(budget + 34);
 

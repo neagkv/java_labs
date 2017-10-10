@@ -6,3 +6,67 @@ package part_05;
  * just once, in one place, set the static instance variable in class_02. Afterwards, print out the value of each instance
  * variable and the static variable for each class.
  */
+
+class BaseballTeams {
+
+    private String league;
+    private char division;
+    static int numOfPlayers;
+
+    public String getLeague() {
+        return league;
+    }
+
+    public void setLeague(String league) {
+        this.league = league;
+    }
+
+    public char getDivision() {
+        return division;
+    }
+
+    public void setDivision(char division) {
+        this.division = division;
+    }
+
+    public static int getNumOfPlayers() {
+        return numOfPlayers;
+    }
+
+    public static void setNumOfPlayers(int numOfPlayers) {
+        BaseballTeams.numOfPlayers = numOfPlayers;
+    }
+}
+
+
+class TeamConstructor {
+
+    public static void main(String[] args) {
+
+        BaseballTeams blueJays = new BaseballTeams();
+        BaseballTeams indians = new BaseballTeams();
+        BaseballTeams reds = new BaseballTeams();
+        BaseballTeams rockies = new BaseballTeams();
+
+
+        blueJays.setDivision('E');
+        blueJays.setLeague("AL");
+
+        indians.setLeague("AL");
+        indians.setDivision('C');
+
+        reds.setLeague("NL");
+        reds.setDivision('C');
+
+        rockies.setLeague("NL");
+        rockies.setDivision('W');
+
+        BaseballTeams.numOfPlayers=32;
+
+        System.out.println("The Blue Jays have " + " " + BaseballTeams.numOfPlayers + " " + "players");
+        System.out.println("The Blue Jays are in the" + " " + blueJays.getLeague());
+
+
+    }
+
+}

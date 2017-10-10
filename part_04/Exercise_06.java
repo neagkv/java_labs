@@ -32,7 +32,6 @@ public class Exercise_06 {
 
     }
 
-
     static class Queue {
 
         private int[] q;                          //this array holds the q
@@ -62,6 +61,7 @@ public class Exercise_06 {
         }
 
         public int size() {
+
             return q.length;
         }
     }

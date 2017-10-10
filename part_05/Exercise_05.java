@@ -7,3 +7,26 @@ package part_05;
  * out "Hello Recursion!" 10 times.
  *
  */
+
+
+class RecursiveDemo {
+
+    static int count =10;
+
+    static void recursiveMeth(){
+        count--;
+        if(count>=0){
+            System.out.println("Hello Recursion!" +count);
+            recursiveMeth();
+
+        }
+    }
+
+
+
+    public static void main(String[] args) {
+    recursiveMeth();
+
+    }
+}
+

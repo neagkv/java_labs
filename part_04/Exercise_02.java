@@ -12,7 +12,7 @@ public class Exercise_02 {
 
     public static void main(String[] strings) {
 
-        int length = 17;                //create  a new int =17
+        int length = 2017;                //create  a new int =17
         int[] ar = new int[length];     // create a new int array =17
 
 
