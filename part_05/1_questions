@@ -123,7 +123,7 @@ method to another?
 
 26) What makes a variable-arity method unique? When should you use it?
 
-    when you are calling many methods with many differetn arguments
+    when you are calling many methods with many different arguments
 
 27) What is the shorthand name for variable-arity?
 
