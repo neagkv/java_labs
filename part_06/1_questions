@@ -1,17 +1,49 @@
 
 1) What is Java inheritance?
 
+java allows one class to incorportate another class into its declaration
+
 2) How does inheritance work?
+
+using the extends keyword. Thus the subclass adds to the extends superclass
+
+
+class subclass-name extends superclass name
+
 
 3) What are some advantages that inheritance provides?
 
+it allows a subclass to inherit all of the variables and methods defined by the superclass and adds its own unique elements
+
+
 4) What does the "super" keyword do?
+
+calls a superclass constructor
+
+it accesses members of the superclass
+
 
 5) In what order are constructors called when there are multiple subclasses?
 
+
+in order of derivation
+
+
+
 6) What does it mean when a method is overridden?
 
+
+when a method im a subclass has the same return type and signature as a method in its superclass, then the method in the subclass is said to override
+in the superclass
+
+
 7) How do overridden methods support polymorphism?
+
+
+
+
+
+
 
 8) What is the difference between an overloaded method and an overridden method?
 
