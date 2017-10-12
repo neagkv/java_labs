@@ -1,20 +1,45 @@
 
 1) What is a Java package?
 
+packages are groups of related class
+
 2) What is the CLASSPATH variable all about?
+
+
+a variable that allows you to specify the path to all of the java classes in a particular package
+
 
 3) What does the package structure mirror?
 
-4 How do packages affect access to Java classes?
+the relationship between a parent class and its subsaquint subclass
 
-5) What is an interface?
+4.) How do packages affect access to Java classes?
+
+the visible element is determined by its access specification and the package in which it resides
+
+
+5.) What is an interface?
+
+an interface species what must be done with and empty method
 
 6) What makes interfaces unique?
 
+they allow you to specify what must be done without telling you how to do it
+
 7) What keyword is used to specify that a class is going to use a separate interface?
+
+interface
 
 8) What makes interfaces so useful?
 
+one interface multiple methods- polymorphism
+
 9) What was added in JDK 8 that makes interfaces even more useful?
 
+
+it is now possible for an interface to specify some behavior
+
+
 10) How many interfaces can a single class implement?
+
+any number of interfaces

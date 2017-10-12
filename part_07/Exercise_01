@@ -1,4 +1,5 @@
 
+/*
 Create the following:
 
 1) Write one super class with at least 3 private instance variables and at least 3 public methods
@@ -8,3 +9,28 @@ extend another subclass which extends the super class. Each subclass should only
 that apply to that subclass, ie Animal -> Mammal -> Whale.
 3) Make use of the keyword "super" in at least two constructors.
 4) Write an interface with at least 3 methods. Have the superclass implement this interface.
+*/
+
+
+
+package part_07;
+
+
+public class Cordota_Phylum {
+
+boolean
+
+
+
+
+}
+
+
+
+class Carnivora_Order {
+
+}
+
+class Ursidae_Family {
+
+}
