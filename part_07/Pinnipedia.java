@@ -20,7 +20,7 @@ public class Pinnipedia extends Carnivora_Order {
         System.out.println("Seal Stuff");
     }
 
-    int sealStuff(int chambersInHeart) {
+    int sealStuff(int x) {
         System.out.println("New Chambers in heart");
         return (getChambersInHeart() - 90000);
 

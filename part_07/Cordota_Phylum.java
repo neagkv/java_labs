@@ -1,6 +1,68 @@
 package part_07;
 
-public class Cordota_Phylum {
+interface MyInterface {
+    public void myMeth1();
+    public void myMeth2();
+    public void myMeth3();
+}
+
+interface MyInterface2 extends MyInterface {
+    public int myMeth1(int i, int x);
+    public void myMeth1(int x);
+   // public void myMeth3();
+
+}
+
+interface MyInterface3 {
+    public void myMethod6();
+    public void myMethod7();
+    public void Mymethiod8();
+}
+
+
+
+public class Cordota_Phylum implements MyInterface2, MyInterface3 {
+
+
+    @Override
+    public void myMeth1() {
+
+    }
+
+    @Override
+    public void myMeth2() {
+
+    }
+
+    @Override
+    public void myMeth3() {
+
+    }
+
+    @Override
+    public int myMeth1(int i, int x) {
+        return 0;
+    }
+
+    @Override
+    public void myMeth1(int x) {
+
+    }
+
+    @Override
+    public void myMethod6() {
+
+    }
+
+    @Override
+    public void myMethod7() {
+
+    }
+
+    @Override
+    public void Mymethiod8() {
+
+    }
 
     private boolean hasNotochord = true;
     private boolean hasNervecord = true;
@@ -100,9 +162,13 @@ class Controller {
         System.out.println("Heyna have " + hyena.getChambersInHeart() + " " + "Chambers in their hearts" + " and"
                 + " " + hyena.getCervicalVertebrate() + " " + "vertebrates");
 
+        System.out.println();
+
         sea_lion.sealStuff();
 
         System.out.println(sea_lion.sealStuff(sea_lion.getChambersInHeart()));
+
+        System.out.println();
 
 
     }
