@@ -1,29 +1,102 @@
 
 1) Describe the exception hierarchy.
 This is not a test
+
+    All exception classes are derived from a class called throwable
+
+
 2) What is a try/catch statement?
+
+    two keywords that work in conjunction with each other to find exception errors
+
 
 3) Why do we use try/catch statements?
 
+    using try and catch allows you to experiemnt to see on which line of code and exception has taken place.
+
 4) Write a full example of a try/catch/finally statement that catches two distinct exceptions
+
+try {
+        //block of code to monitor for errors
+      }
+
+Catch (ExcepType1 exOb) {
+//handler for ExcepType1
+}
+
+
+catch (ExcepType2 exOb) {
+//handler for ExcepType2
+}
+
+
 
 5) What does it mean to "throw" an exception? How does it work?
 
+    The throws keyword means the exception could be thrown out of the method
+
+
+
 6) What happens if your application encounters an exception and you don't catch it or throw it?
+
+    the program will have a run time error
 
 7) When catching exception in an inheritance hierarchy, should you catch the subclass exception or the
 superclass exception first? Why?
 
+
+    try to catch the superclass exception first, because the jvm will automatically catch the exceptions in all its dervivative classes
+
+
 8) Write a nested try/catch statement.
+
+    try {
+    //block of code to monitor for errors
+  }
+  catch (ExcepType1 exOb) {
+  //handler for ExcepType1
+  }
+  catch (ExcepType2 exOb) {
+  //handler for ExcepType2
+  }
+  //...
+
+ finaly {
+ //finally code
+ }
+
 
 9) What does it mean to rethrow an exception?
 
+    it catches a method and then throws it again allowing the method to comoplete some additional action inbetween the events
+
 10) What are the 7 methods that come with the Throwable class?
+
+    Throwable fillnStackTrace()
+    String getLocalizedMessage()
+    String getMessage()
+    Void printStackTrace()
+    void printStackTrace(PrintStream stream)
+    void printStackTrace(PrintWriter stream)
+    Stirng toString()
+
+
 
 11) What does the "finally" block do?
 
+    the finally blcok allows you to execute code when the runtime error may have caused the return to loop,
+    that will never allow the code to be
+    completed.
+
+
 12) When is the finally block executed? Will it ever not be executed?
 
+    the finally block will be executed whenever execution leaves a try/catch block no matter what conditions cause it. it will always execute
+
 13) What are the three recently added features to Java exceptions?
+
+    automatic resource mangement
+    mulit-catch
+    rethrow
 
 
