@@ -13,6 +13,7 @@ import java.util.Scanner;
  *
  *      Output should read like - "27.4 degrees celsius = 81.32 degrees fahrenheit"
  */
+
 public class Exercise_01 {
 
     public static void main(String[] args) throws java.io.IOException {
@@ -21,7 +22,9 @@ public class Exercise_01 {
 
         System.out.print("Enter a degree in Celsius: ");
 
+        double degreesCelsius = input.nextDouble();
 
-        
+        System.out.println("Degree in Fahrenheit: " + (9*(degreesCelsius/5) + 32));
+
     }
 }

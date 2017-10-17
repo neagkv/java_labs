@@ -12,6 +12,7 @@ import java.util.Scanner;
  *
  *      tip: area = radius * radius * 3.1415 (roughly)
  */
+
 public class Exercise_02 {
 
     public static void main(String[] args) throws java.io.IOException {
@@ -24,5 +25,12 @@ public class Exercise_02 {
         System.out.print("Enter length: ");
         double length = input.nextDouble();
         //...
+
+        double AreaClyinder =(radius * radius * Math.PI);
+        double VolumeClyinder =(Math.sqrt(radius)*Math.PI * length);
+
+
+        System.out.println("The area of the clynider is " + " " + AreaClyinder);
+        System.out.println("The volume of the clyinder is " + " " + VolumeClyinder);
     }
 }
