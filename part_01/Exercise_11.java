@@ -15,16 +15,7 @@ package part_01;
 public class Exercise_11 {
 
     public static void main(String[] strings) {
-    double secsperday=(24*60*60);
-    double totalbornperday=(secsperday/6);
-    double totaldiesperday=(secsperday/12);
-    double totalimmigratesperday=(secsperday/40);
-    double changeuspopperday=(totalbornperday + totalimmigratesperday - totaldiesperday);
-    long change= (long) changeuspopperday;
-    long changeper3= change*365*3;
-    long Totaluspop= changeper3 + 380123456;
 
-    System.out.println("US population equals" + " " + Totaluspop + " After 3 years");
         //...
 
 

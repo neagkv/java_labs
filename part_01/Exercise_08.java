@@ -13,10 +13,7 @@ public class Exercise_08 {
     private static final double radius = 3.14;
 
     public static void main(String[] args) {
-    double perimeter;
-    double area;
-    System.out.println("Perimeter equals" + " " + 2*radius*(22/7));
-    System.out.println("area equals" + " " + (radius*radius*Math.PI));
+
         //...
     }
 }

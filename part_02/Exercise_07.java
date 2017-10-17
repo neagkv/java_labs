@@ -1,5 +1,6 @@
 package part_02;
 
+
 import java.util.Scanner;
 
 /**
@@ -40,3 +41,4 @@ public class Exercise_07 {
 
     }
 
+}

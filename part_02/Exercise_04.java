@@ -13,18 +13,7 @@ import java.util.Scanner;
  */
 public class Exercise_04 {
 
-    public static void main(String[] args) throws java.io.IOException {
-        Scanner input = new Scanner(System.in);
+    public static void main(String[] args) {
 
-        System.out.println("Enter pounds: ");
-
-        double WeightPounds = input.nextDouble();
-
-        double WeightKilos = (WeightPounds * 0.454);
-
-            System.out.println(WeightPounds + " " + "lbs" + " " +  " equals" + " " + WeightKilos + " " + "In kg");
-
-
-
-        }
+    }
 }

@@ -15,6 +15,7 @@ public class Exercise_06 {
         //...
 
         //System.out.println(...);
+
         int i;
         for (i = 1; i <= 17; i += 2) {
             if(i==17){
