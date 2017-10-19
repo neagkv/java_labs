@@ -43,3 +43,34 @@ class Stack {
 }
 
 
+
+class StackController {
+
+    public static void main(String[] strings) throws java.io.IOException {
+
+        System.out.println("Enter a number");
+        Scanner input = new Scanner(System.in);
+        int size = input.nextInt();
+        Stack test = new Stack(size);
+
+        try {
+            test.push('c');
+        } catch (StackFull stackFull) {
+            stackFull.printStackTrace();
+        }
+        try {
+            test.push('b');
+        } catch (StackFull stackFull) {
+            stackFull.printStackTrace();
+        }
+        try {
+            System.out.println(test.pop());
+        } catch (StackEmpty stackEmpty) {
+            stackEmpty.printStackTrace();
+        }
+
+
+    }
+}
+
+
