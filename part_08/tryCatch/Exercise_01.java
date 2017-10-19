@@ -1,4 +1,4 @@
-package part_08;
+package part_08.tryCatch;
 
 public class Exercise_01 {
 
