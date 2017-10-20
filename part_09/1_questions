@@ -1,26 +1,64 @@
 
 1) What is the difference between a byte stream and a character stream?
 
+a byte stream preforms input and outputs of data in 8 bite bytes, a character stream reads data character by character instead of bite by bite
+
 2) List at least 3 examples of byte stream classes?
 
+1.)InputStream
+2.)FilterInputStream
+3.)OutputStream
+
+
 3) List at least 3 examples of character stream classes?
+1.)BufferedReader
+2.)StringReader
+3.)FileReader
 
 4) What is try-with-resources? Why is it super cool?
 
+a statement that contains an object that must be closed after using. The try with rescources automatically calls the
+close() method when the object is done being used.
+
+
 5) Demonstrate a try-wth-resources block:
+
+static String readFirstLineFromFile(String path) throws IOException {
+    try (BufferedReader br =
+                   new BufferedReader(new FileReader(path))) {
+        return br.readLine();
+    }
+}
+
 
 6) What does the read() method on the FileInputStream class return?
 
+the input bite by bite
+
 7) What is the documentation above of the FileInputStream class header say? (hint: inside /** ... */)
+?
+
 
 8) Is a DataOutputStream used for bytes or characters?
 
+characters
+
 9) What is a BufferedReader?
+
+convert the input from byte to characters
 
 10) Why does a BufferedReader require an InputStreamReader as an argument?
 
+because it must take in the arguments as byets before it can convert them to characters
+
 11) What does the InputStreamReader dp with it's byte stream argument?
+
+converts the bytes into characters
 
 12) What is the difference between the read() and readLine() on BufferedReader?
 
+readLine will only read upto the first line in the text
+
 13) Demonstrate instantiating a BufferedReader that will read a file called "yucatan_cenotes.txt"
+
+ufferedReader in = new BufferedReader(new FileReader(new File("yucatan_cenotes.txt")));
