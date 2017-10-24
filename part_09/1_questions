@@ -57,7 +57,7 @@ converts the bytes into characters
 
 12) What is the difference between the read() and readLine() on BufferedReader?
 
-readLine will only read upto the first line in the text
+readLine will only read upt0o the first line in the text
 
 13) Demonstrate instantiating a BufferedReader that will read a file called "yucatan_cenotes.txt"
 
