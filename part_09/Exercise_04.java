@@ -14,16 +14,34 @@ public class Exercise_04 {
 
     public static void main(String[] args) {
 
-        File myFile = new File("/Users/kevinneag/Downloads/county_facts.csv");
 
+        File myFile = new File("/Users/kevinneag/Downloads/county_facts.csv");
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
 
-        System.out.println(sdf.format(myFile.lastModified()));
-        System.out.println(myFile.canWrite());
 
+        if (myFile.exists()) {
+
+            System.out.println(sdf.format(myFile.lastModified()));
+            System.out.println(myFile.canWrite());
+            System.out.println();
+
+
+            boolean success = myFile.setReadOnly();
+            if (success) {
+                System.out.println("Successfully set file into read only");
+            } else {
+                System.out.println("Setting the file to read only is not successful");
+            }
+        } else{
+                System.out.println("File does not exist");
+            }
+
+            System.out.println(myFile.canWrite());
+            System.out.println("Can no longer write to file");
+        }
 
     }
-}
+
 
 
 
