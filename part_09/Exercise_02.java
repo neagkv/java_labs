@@ -11,7 +11,7 @@ public class Exercise_02 {
         try {
 
 
-            FileInputStream stremer = new FileInputStream("//Jialor's Favoriet Poems.txt");
+            FileInputStream stremer = new FileInputStream("history.txt");
             BufferedInputStream bufferedStremer = new BufferedInputStream(stremer);
 
 
