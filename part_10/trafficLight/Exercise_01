@@ -1,2 +1,14 @@
 Complete Exercise 4 in Chapter 12 self test.
 
+//4.) The traffic light simulation developed in Try this 12-1 can be improved with a few simple changes that take
+//advantage of an enumeration's class features. In the version shown, the duration of each color was controlled by the
+Traffic Light Simulator class by hard-coding these values into the run() method. Change this so that the duration of each color
+//is stored by the constant int the TrafficLightColor enumeration. To do this, you will need to add a constructor, private
+instance variabels, and a method called getDelay(). After making these changes, what improvements do you see? On your own,
+can you think of other improvements?(Hint: Try using odrinal values to switch light colors rather than relying on a switch statement.)
+
+
+
+
+
+
