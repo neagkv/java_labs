@@ -61,4 +61,4 @@ readLine will only read upt0o the first line in the text
 
 13) Demonstrate instantiating a BufferedReader that will read a file called "yucatan_cenotes.txt"
 
-ufferedReader in = new BufferedReader(new FileReader(new File("yucatan_cenotes.txt")));
+bufferedReader in = new BufferedReader(new FileReader(new File("yucatan_cenotes.txt")));
