@@ -1,90 +1,67 @@
 package part_09;
 
-//8. Change the TickTock class so that it actually keeps time. That is, have each tick take one half second, and each tock
-//take one half second. Thus, each tick-tock will take one second. (Don?t worry about the time it takes to switch tasks, etc.)
+// Make the TickTock class actually keep time.
 
-public class Chapter_11_08 {
+class TickTock {
 
     String state;
 
     synchronized void tick(boolean running) {
-        if(!running) {
-            state = "ticked";
+        if (!running) {
+            state = "Ticked";
             notify();
             return;
-
         }
-        System.out.println("Tick ");
 
-        state = "Ticked";
+        else {
+
+            System.out.print("Tick ");
+        }
+
+
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException exc) {
+            System.out.println("Thread interrupted.");
+        }
+
+        state = "ticked";
 
         notify();
-        try{
-            while(!state.equals("tocked"))
+        try {
+            while (!state.equals("tocked"))
                 wait();
-        }
-        catch (InterruptedException exc) {
-            System.out.println("Thread Interrupted.");
+        } catch (InterruptedException exc) {
+            System.out.println("Thread interrupted.");
         }
     }
+
     synchronized void tock(boolean running) {
-        if(!running) {
+        if (!running) {
             state = "tocked";
             notify();
             return;
         }
+        else {
 
-        System.out.println("Took");
+            System.out.println("Tock");
+        }
+
+
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException exc) {
+            System.out.println("Interrupted Exception");
+        }
 
         state = "tocked";
 
         notify();
-        try{
+        try {
             while (!state.equals("ticked"))
                 wait();
-        }
-        catch(InterruptedException exc) {
-            System.out.println("Thread interrupted");
-        }
-    }
-
-}
-
-
-class MyThread implements Runnable {
-    Thread thrd;
-    Chapter_11_08 obj;
-
-    MyThread(String name, Chapter_11_08 tt) {
-        thrd = new Thread(this, name );
-        obj = tt;
-        thrd.start();
-    }
-
-    public void run() {
-        if(thrd.getName().compareTo("Tick")==0) {
-            for(int i=0; i<5; i++) obj.tick(true);
-            obj.tick(false);
-        }
-        else {
-            for(int i =0; i<5; i++) obj.tock(true);
-            obj.tock(false);
-        }
-    }
-}
-
-class ThreadCom {
-    public static void main(String args[]) {
-        Chapter_11_08 tt = new Chapter_11_08();
-        MyThread mt1 = new MyThread("Tick", tt);
-        MyThread mt2 = new MyThread("Tock", tt);
-
-        try{
-            mt1.thrd.join();
-            mt2.thrd.join();
-
-        } catch(InterruptedException exc) {
-            System.out.println("Main thread interrupted.");
+        } catch (InterruptedException exc) {
+            System.out.println("Interrupted Exception.");
         }
     }
 }
