@@ -5,5 +5,25 @@ package part_11;
  */
 
 
-public class Exercise_02 {
+public class Exercise_02  {
+
+    public static void main(String[] args) {
+
+        int [] abc;
+
+    }
+
+    void exchangeMeth(int[] abc){
+
+        for(int x : abc
+
+
+        }
+
+
+    }
+
+
+
+
 }

@@ -1,13 +1,19 @@
 
 1) Turn the following into a Generic interface:
 
-   public interface Consumer {
+   public interface Consumer<new_gen> {
+
+
        public void consume(String parameter)
    }
 
 2) What are a few advantages of using Generic types?
 
+you will be able to use similar code for different data types
+
 3) What is Type Erasure?
+
+Type Erasure allows java to use generics without breaking older code that does not support generics
 
 4) Assuming the following snippet:
 
@@ -17,12 +23,25 @@
 
     Does this work?
     Integer i = returnType(1);
+    no, you can not use a primitive type with generics
     String s = returnType("String");
+    Yes this will work becuase string s is an object
 
 5) What is a Bounded Type Parameter?
 
+a parameter that limits the types that can be bonded into a parameter
+
 6) Demonstrate the use of Generic Wildcard in a method signature:
+
+NumericFns(T n) {}
 
 7) What are bounded and unbounded wildcards in Generics?
 
+compares the absolute value of two arguments and returns ture even if they are objects of different types
+
 8) What is difference between List<? extends T>  and  List <? super T> ?
+
+
+List< ? extends X > doesn't allow to add anything into the list.
+
+List< ? super X > allows to add anything that is-a X (X or its subclass).
