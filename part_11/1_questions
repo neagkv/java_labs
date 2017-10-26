@@ -41,7 +41,5 @@ compares the absolute value of two arguments and returns ture even if they are o
 
 8) What is difference between List<? extends T>  and  List <? super T> ?
 
-
-List< ? extends X > doesn't allow to add anything into the list.
-
-List< ? super X > allows to add anything that is-a X (X or its subclass).
+extends means the generic type must be a subclass of T
+super means the generic type must be a parent class of T
