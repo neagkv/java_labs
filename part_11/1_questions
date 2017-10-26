@@ -25,7 +25,7 @@ Type Erasure allows java to use generics without breaking older code that does n
     Integer i = returnType(1);
     no, you can not use a primitive type with generics
     String s = returnType("String");
-    Yes this will work becuase string s is an object
+    Yes this will work because string s is an object
 
 5) What is a Bounded Type Parameter?
 

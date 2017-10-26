@@ -15,17 +15,19 @@ public class Bonus <T extends Number> {
         n = num;
     }
 
-    <T> void sumArray(T[] array){
+    public static <T extends Number> double sumArray(T[] array) {
 
+        double sum = 0;
 
-
-
+        for (T x : array) {
+            sum += x.doubleValue();
 
 
         }
 
-
+        return sum;
     }
+}
 
 
 
