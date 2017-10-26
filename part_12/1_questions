@@ -1,9 +1,17 @@
 
 1) What is a lambda expression?
 
+--a function that can be created without belonging to a class
+
 2) What is the general form of a lambda expression?
 
+-- () ->
+
 3) What is a functional interface?
+
+--
+
+a interface that specifies only one abstract method
 
 4) Write a lambda expression that uses the following functional interface:
 
@@ -13,6 +21,19 @@
 
     // write lambda here as though it were in another class
 
+  ----------------------------------------------------------------
+    SomeInterface obj = (a, b) -> {
+        if(a == b) {
+            return true;
+        }
+         return false;
+
+
+
+    };
+
+
+
 5) Write a lambda expression that uses the following functional interface:
 
     interface GenericTest {
@@ -20,12 +41,31 @@
     }
 
     // write lambda here as though it were in another class
+ ----------------------------------------------------------------------
+
+ GenericTest <T> obj = (a, b) -> {
+    if(a == b) {
+        return true;
+        }
+        return false;
+
+      };
+
+
+
 
 6) Analyze and run the LambdaSpeedDemo.java file in the part_12 package. Understand the similarities between lambda expressions
 and anonymous inner classes as well as interfaces (and interface implementations). Run this application and take a look at the results.
 Change the number of loops for each test and see what happens. Which implementation is fastest? How did the lambda do?
 
+the Lambda is much slower than both the annon class and the interface implementation
+
+
 7) What is variable capture?
 
+if you use a variable outside of the lambdas scope it is treated as final and the lambda expression can not change that variable
+
 8) How do you throw an exception from within a lambda expression?
+
+you must make sure that the expression in thrown from the parent interface
 
