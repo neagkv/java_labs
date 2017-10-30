@@ -1,6 +1,7 @@
-package mysql;
+package mysql.example1;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 public class MySQLAccess {
     private Connection connection = null;
@@ -10,62 +11,72 @@ public class MySQLAccess {
 
     public static void main(String[] args) {
         MySQLAccess example = new MySQLAccess();
+
+
         try {
-            example.readDataBase(args[0], args[1], Integer.parseInt(args[2]), args[3]);
+            example.readDataBase("JDBC Course 1", 3);
         } catch (Exception e){
             System.out.println("error in readDateBase()" + e.getMessage());
             System.out.println(e.getStackTrace());
         }
     }
 
-    public void readDataBase(String course_name, String desc, int credits, String department)
+    public void readDataBase(String course_name, int units)
             throws Exception {
         try {
             // This will load the MySQL driver, each DB has its own driver
             Class.forName("com.mysql.jdbc.Driver");
             // Setup the connection with the DB
-            connection = DriverManager.getConnection("jdbc:mysql://localhost/college?" +
-                    "user=ryan&password=CodingNomadsFoEva!&useSSL=false");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/University?" +
+                    "user=root&password=&useSSL=false");
 
 
             // Statements allow to issue SQL queries to the database
             statement = connection.createStatement();
 
             // Result set get the result of the SQL query
-            resultSet = statement.executeQuery("select * from college.courses;");
+            resultSet = statement.executeQuery("select * from University.courses;");
 
-            writeResultSet(resultSet);
+            //writeResultSet(resultSet);
+            ArrayList<Course> course = mapResultSetToObjects(resultSet);
+
+            for (Course c : course){
+                System.out.println(c.toString());
+            }
+
 
             // PreparedStatements can use variables and are more efficient
             preparedStatement = connection
-                    .prepareStatement("insert into  college.courses (course_name, description, credits, department) " +
-                            "values (?, ?, ?, ?)");
+                    .prepareStatement("insert into  University.courses (name, units) " +
+                            "values (?, ?)");
             // Parameters start with 1
             preparedStatement.setString(1, course_name);
-            preparedStatement.setString(2, desc);
-            preparedStatement.setInt(3, credits);
-            preparedStatement.setString(4, department);
+           // preparedStatement.setString(2, credits);
+            preparedStatement.setInt(2, units);
+            //preparedStatement.setString(4, department);
             preparedStatement.executeUpdate();
 
 
             preparedStatement = connection
-                    .prepareStatement("SELECT course_name, description, credits, department from college.courses");
+                    .prepareStatement("SELECT * from University.courses");
             resultSet = preparedStatement.executeQuery();
 
-            writeResultSet(resultSet);
+            //writeResultSet(resultSet);
 
 
-            // Remove again the insert comment
-//            preparedStatement = connection
-//                    .prepareStatement("delete from college.courses where course_name = ? ; ");
-//            preparedStatement.setString(1, "Database Design");
-//            preparedStatement.executeUpdate();
 
-            resultSet = statement.executeQuery("select * from college.courses");
+             //Remove again the insert comment
+            preparedStatement = connection
+                    .prepareStatement("delete from University.courses where name = ? ; ");
+            preparedStatement.setString(1, "JDBC Course 1");
+            preparedStatement.executeUpdate();
+
+            resultSet = statement.executeQuery("select * from University.courses");
 
             writeMetaData(resultSet);
 
         } catch (Exception e) {
+            e.printStackTrace();
             throw e;
         } finally {
             close();
@@ -93,19 +104,40 @@ public class MySQLAccess {
             // also possible to get the columns via the column number
             // which starts at 1
             // e.g. resultSet.getSTring(2);
-            String course = resultSet.getString("course_name");
-            String description = resultSet.getString("description");
-            int credits = resultSet.getInt("credits");
-            String department = resultSet.getString("department");
+            String course = resultSet.getString("name");
+            //String description = resultSet.getString("description");
+            int credits = resultSet.getInt("units");
+            //String department = resultSet.getString("department");
             System.out.println("Course: " + course);
-            System.out.println("Description: " + description);
+           // System.out.println("Description: " + description);
             System.out.println("Credits: " + credits);
-            System.out.println("Department: " + department);
+           // System.out.println("Department: " + department);
             System.out.println("---------------------------------");
             System.out.println("---------------------------------");
 
         }
     }
+
+    private ArrayList<Course> mapResultSetToObjects(ResultSet resultSet) throws SQLException {
+
+        ArrayList<Course> retList = new ArrayList();
+
+        // ResultSet is initially before the first data set
+        while (resultSet.next()) {
+            Course c = new Course();
+            c.setId(resultSet.getInt("id"));
+            c.setName(resultSet.getString("name"));
+            c.setUnits(resultSet.getInt("units"));
+
+            retList.add(c);
+        }
+
+        return retList;
+    }
+
+
+
+
 
     // You need to close the resultSet
     private void close() {
