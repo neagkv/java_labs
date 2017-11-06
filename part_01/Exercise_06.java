@@ -10,13 +10,18 @@ package part_01;
  */
 
 public class Exercise_06 {
+
     public static void main(String[] args) {
 
         int i;
+
         for (i = 1; i <= 17; i += 2) {
             if(i==17){
+
                 System.out.println(i);
+
             } else {
+
                 System.out.print(i + " " + " + ");
             }
         }
