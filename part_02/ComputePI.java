@@ -11,19 +11,23 @@ package Part_02;
  * */
 
 public class ComputePI {
+
     public static void main(String[] args) {
+
         double pi = 0;
         double y = 1;
-
-        int loops = 90000000*2;
+        int loops = 90000000 * 2;
         int count = 0;
 
-        for(int x=1; x < loops; x+=2) {
+        for(int x = 1; x < loops; x += 2) {
+
+            // alternate the sign each time
             pi = pi + (y/x);
-            y = -y;    // alternate the sign each time
+            y = -y;
 
         }
 
-        System.out.println("π = " + 4*pi + " after " + loops/2 + " loops"); //PI=3.141592642478473 after 90000000
+        //PI=3.141592642478473 after 90000000
+        System.out.println("π = " + 4 * pi + " after " + loops/2 + " loops");
     }
 }

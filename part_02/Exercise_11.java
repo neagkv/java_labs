@@ -18,20 +18,25 @@ import java.util.Scanner;
  */
 
 public class Exercise_11 {
+
     public static void main(String[] Strings) {
 
         Scanner input = new Scanner(System.in);
 
         System.out.print("Enter investment amount: ");
+
         double amount = input.nextDouble();
 
         System.out.print("Enter annual interest rate in percentage: ");
+
         double rate = input.nextDouble();
 
         System.out.print("Enter number of years: ");
+
         double years = input.nextDouble();
 
-        double totalInvestment =(((rate/100)*amount)*years + amount);
+        double totalInvestment =(((rate/100) * amount) * years + amount);
+
         System.out.println(totalInvestment);
 
     }

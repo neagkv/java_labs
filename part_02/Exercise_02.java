@@ -16,6 +16,7 @@ import java.util.Scanner;
 public class Exercise_02 {
 
     public static void main(String[] args) throws java.io.IOException {
+
         double area, volume;
 
         Scanner input = new Scanner(System.in);
@@ -24,10 +25,10 @@ public class Exercise_02 {
         double radius = input.nextDouble();
         System.out.print("Enter length: ");
         double length = input.nextDouble();
-        //...
+
 
         double AreaClyinder =(radius * radius * Math.PI);
-        double VolumeClyinder =(Math.sqrt(radius)*Math.PI * length);
+        double VolumeClyinder =(Math.sqrt(radius) * Math.PI * length);
 
 
         System.out.println("The area of the clynider is " + " " + AreaClyinder);

@@ -15,13 +15,16 @@ import java.util.Scanner;
 public class Exercise_06 {
 
     public static void main(String[] args) throws java.io.IOException {
+
         Scanner input = new Scanner(System.in);
+
         System.out.println("Enter a number 1-10: ");
 
         int YourNumber = input.nextInt();
 
 
         switch(YourNumber) {
+
             case 1:
                 System.out.println("YourNumber is ONE");
                 break;
@@ -53,6 +56,7 @@ public class Exercise_06 {
                 System.out.println("Your Number is Other");
                 break;
         }
+
         System.out.println();
     }
 }

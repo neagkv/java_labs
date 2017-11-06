@@ -17,6 +17,7 @@ import java.util.Scanner;
  */
 
 public class Exercise_12 {
+
     public static void main(String[] Strings) {
 
         Scanner input = new Scanner(System.in);
@@ -31,6 +32,7 @@ public class Exercise_12 {
         double pricePerGal = input.nextDouble();
 
         double totalTripCoast = ((miles/mpg) * pricePerGal);
+        
         System.out.println(totalTripCoast);
     }
 }

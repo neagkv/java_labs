@@ -24,28 +24,28 @@ public class Exercise_05 {
         if(YourNumber == 1) {
             System.out.println("ONE");
         }
-        else if(YourNumber ==2) {
+        else if(YourNumber == 2) {
             System.out.println("TWO");
         }
-        else if(YourNumber ==3) {
+        else if(YourNumber == 3) {
             System.out.println("THREE");
         }
-        else if(YourNumber ==4) {
+        else if(YourNumber == 4) {
             System.out.println("FOUR");
 
-        }   else if(YourNumber ==5) {
+        }   else if(YourNumber == 5) {
             System.out.println("FIVE");
 
-        }  else if(YourNumber ==6) {
+        }  else if(YourNumber == 6) {
             System.out.println("SIX");
 
-        }   else if(YourNumber ==7) {
+        }   else if(YourNumber == 7) {
             System.out.println("SEVEN");
 
-        }   else if(YourNumber ==8) {
+        }   else if(YourNumber == 8) {
             System.out.println("EIGHT");
 
-        }   else if(YourNumber ==9) {
+        }   else if(YourNumber == 9) {
             System.out.println("NINE");
         }   else {
             System.out.println("OTHER");
