@@ -17,8 +17,6 @@ public class ClassA {
             System.out.println("The exception was caught");
         }
 
-        
-
     }
 
 }

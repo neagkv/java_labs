@@ -3,6 +3,7 @@ package part_08.tryCatch;
 public class Exercise_01 {
 
     public static void main(String[] args) {
+
         int a, b;
 
 

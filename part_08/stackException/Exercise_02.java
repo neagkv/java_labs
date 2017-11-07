@@ -22,6 +22,7 @@ class Stack {
 
 
         }
+
         s[pushloc++] = ch;
         poploc++;
         return;
