@@ -1,6 +1,8 @@
 package part_06;
 //Sea Birds Class inherits from the Bird class
+
 public class Sea_Birds extends Birds {
+
     //Unique seabird instance variables
     private boolean brightColors;
     private boolean livesNearSea;

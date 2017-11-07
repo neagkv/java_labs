@@ -1,6 +1,7 @@
 package part_06;
 //Seagull class which inherits from the seabirds class which inherits from the birds class
 public class Sea_Gulls extends Sea_Birds {
+
     //unique seagull instance variables
     boolean isSeaGull;
     boolean counterShading;
@@ -14,7 +15,6 @@ public class Sea_Gulls extends Sea_Birds {
         this.weight = weight;
     }
 
-
     //creating a method with the same name as one in a class in which in inherits allows you to override
     @Override
     void makeBirdSounds() {
@@ -23,13 +23,12 @@ public class Sea_Gulls extends Sea_Birds {
         //This is the fuction that will preform as a result of the new method
         System.out.println("Sea Gull Sounds");
     }
+
     /* another example of a overriding method, this time no call to super so the fuctions of the parent method will
         not preform
      */
+
     void doBirdThings() {
         System.out.println("Doing Seagull things");
-
-
-
     }
 }
