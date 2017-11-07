@@ -16,6 +16,7 @@ class Outty{
 
 
     public Outty(int length, int height, int width) {
+
         this.length = length;
         this.height = height;
         this.width = width;
@@ -23,6 +24,7 @@ class Outty{
     }
 
     public Outty() {
+
     }
 
     void createOuttyObj() {
@@ -41,6 +43,7 @@ class Outty{
 
 
     public static void main(String[] args) {
+
         Outty obj2 = new Outty();
         obj2.createOuttyObj();
 
@@ -75,6 +78,7 @@ class Outty{
     class Inny{
 
         int innyMeth() {
+
             setHeight(10);
             System.out.println(getHeight());
             return (getHeight() + 5);
@@ -82,15 +86,13 @@ class Outty{
         }
 
         int innyMeth2() {
+
             setLenght(700);
             setWidth(34);
             System.out.println(getLength());
             volume = (getLength() * getHeight() * getWidth());
             return(volume);
         }
-
-
-
 
         }
     }

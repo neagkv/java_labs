@@ -97,6 +97,7 @@ class State {
     }
 
     public void createCity(int cityPop, String name) {
+
         City city = new City();
         city.setCityPop(cityPop);
         city.setName(name);
@@ -105,6 +106,7 @@ class State {
     }
 
     public void createCounty(int countyPop, String countyname) {
+
         County county = new County();
         county.setCountyPop(countyPop);
         county.setCountyName(countyname);

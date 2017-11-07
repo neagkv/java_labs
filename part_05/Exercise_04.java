@@ -58,21 +58,21 @@ class TvShows{
 
 
 
-class TvConstructer{
+class TvConstructer {
 
-public static void main(String[]args){
+    public static void main(String[] args) {
 
-    TvShows simpsons = new TvShows("The_Simpsons", 30, 700);
-    TvShows friends = new TvShows("Friends", 18);
-    TvShows got = new TvShows("Game of Thrones");
+        TvShows simpsons = new TvShows("The_Simpsons", 30, 700);
+        TvShows friends = new TvShows("Friends", 18);
+        TvShows got = new TvShows("Game of Thrones");
 
-    simpsons.setEpsiodes(5000);
-    friends.setSeasons(15);
-    got.setName("G_O_T");
+        simpsons.setEpsiodes(5000);
+        friends.setSeasons(15);
+        got.setName("G_O_T");
 
 
-    System.out.println(simpsons.getEpsiodes());
-    System.out.println(got.getName());
-
+        System.out.println(simpsons.getEpsiodes());
+        System.out.println(got.getName());
+    }
 }
-        }
+

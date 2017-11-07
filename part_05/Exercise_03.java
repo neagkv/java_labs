@@ -113,6 +113,7 @@ class Movie_Creator{
     }
 
     public void setMovieDetails(Movies movie) {
+
         movie.setViews(25);
         movie.setBudget(8);
         movie.setLonger_2hrs(true);
@@ -121,6 +122,7 @@ class Movie_Creator{
     }
 
     public void setMovieDetails(Movies movie, int views) {
+
         movie.setViews(views);
         movie.setBudget(8);
         movie.setLonger_2hrs(true);
@@ -141,22 +143,17 @@ class Movie_Creator{
     }
 
     public void changeMovieDetails(Movies movie, int year, int budget, double views){
+
         movie.setYear(year - 3);
         movie.setBudget(budget + 6);
         movie.setViews(views + 84);
     }
 
     public void changeMovieDetails(Movies movie, int year, int budget){
+
         movie.setYear(year - 18);
         movie.setBudget(budget + 34);
 
     }
-
-
-
-
-
-
-
 }
 

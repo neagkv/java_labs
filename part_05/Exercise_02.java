@@ -56,6 +56,7 @@ class New_York{
     }
 
     public static void asteroid(City_New_York a) {
+
         a.setPopulation(a.getPopulation() - 5000);
         a.setSkyscrapers(a.getSkyscrapers() -150);
 
