@@ -3,7 +3,9 @@ package part_07;
 public class Carnivora_Order extends Mammilia_Class {
 
     static int numbOfSpecies = 260;
+
     private int numbOfToes;
+
     private int numbSetsOfTeeth;
 
     public Carnivora_Order(boolean hasNotochord, boolean hasNervecord, boolean haspharyngeal_slits,

@@ -1,16 +1,16 @@
 package part_07;
 
 interface MyInterface {
+
     public void myMeth1();
     public void myMeth2();
     public void myMeth3();
 }
 
+//interface extending another interface
 interface MyInterface2 extends MyInterface {
     public int myMeth1(int i, int x);
     public void myMeth1(int x);
-   // public void myMeth3();
-
 }
 
 interface MyInterface3 {
@@ -18,7 +18,6 @@ interface MyInterface3 {
     public void myMethod7();
     public void Mymethiod8();
 }
-
 
 
 public class Cordota_Phylum implements MyInterface2, MyInterface3 {

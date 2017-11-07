@@ -51,7 +51,9 @@ public class Mammilia_Class  extends Cordota_Phylum {
     }
 
     void changeEveryParentParameter(){
+
         System.out.println("Changing Every Parent Parameter");
+
         setHasNervecord(false);
         setHasNotochord(false);
         setHaspharyngeal_slits(false);
