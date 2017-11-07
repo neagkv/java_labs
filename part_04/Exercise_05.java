@@ -13,16 +13,17 @@ package part_04;
 public class Exercise_05 {
 
     public static void main(String[] strings) {
-
-        int [] nums = new int [200];        // creates a new int array 200 elements long
-
-        for(int i=0; i < nums.length; i++){ //populates the array
+        // creates a new int array 200 elements long
+        int [] nums = new int [200];
+        //populates the array
+        for(int i=0; i < nums.length; i++){
             nums[i] = i+1;
         }
 
-        for(int x: nums) {                   // for each value x along the nums array
-            System.out.println(nums[x-1]);   // print the value of x-1 which is the index
-
+        // for each value x along the nums array
+        for(int x: nums) {
+            // print the value of x-1 which is the index
+            System.out.println(nums[x-1]);
         }
     }
 }

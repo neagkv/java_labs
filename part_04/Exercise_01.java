@@ -20,31 +20,37 @@ import java.util.Scanner;
 public class Exercise_01 {
 
     public static void main(String[] strings) throws java.io.IOException {
+
         Scanner input = new Scanner(System.in);
 
-        int a[] = new int[10];       //declares a new 10 element array object
+        //declares a new 10 element array object
+        int a[] = new int[10];
 
-
+        //set the index of the array at 0-10 to the user input
         for (int i = 0; i < 10; i++) {
-            a[i] = input.nextInt();  //set the index of the array at 0-10 to the user input
+
+            a[i] = input.nextInt();
         }
 
-        for (int i = 0; i < a.length; i++) {  //another for loop that set the index of the array at 0-10
-            if (i % 2 != 0) {                  //if index is not divisible by two
-                System.out.println(a[i]);      // print out the odd number index in ascending order
+        //another for loop that set the index of the array at 0-10
+        for (int i = 0; i < a.length; i++) {
+            //if index is not divisible by two
+            if (i % 2 != 0) {
+                // print out the odd number index in ascending order
+                System.out.println(a[i]);
             }
         }
 
-
-        for (int i = (a.length -1); i >=  0; i--) {  //a for loop that takes the lenght of the array -1(index) and counts down to 0
-            if (i %2 ==0) {                          // if the index is divisible by 0
-                System.out.println(a[i]);  // prints the even number index in descending order
+        //a for loop that takes the lenght of the array -1(index) and counts down to 0
+        for (int i = (a.length -1); i >=  0; i--) {
+            // if the index is divisible by 0
+            if (i %2 ==0) {
+                // prints the even number index in descending order
+                System.out.println(a[i]);
             }
         }
-            }
-
-
-        }
+    }
+}
 
 
 

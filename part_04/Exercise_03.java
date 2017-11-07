@@ -16,26 +16,32 @@ public class Exercise_03 {
 
     public static void main(String[] strings) {
 
-        int[][] a = new int [5][10];     //creates new 2-d array
-        int count=0;                     // creates a count variable and sets it equal to zero
-
-        for(int i=0; i < a.length; i++){    // counts up from zero to the length of the array of arrays (4)
-            for(int j=0; j < a[i].length; j++){ // creates a new index sets it equal to zero and less than the (10)
-                                                // 10 equals the index of a[i]. a[4] has 9 indexes
-
-
-                a[i][j] =count;                // sets each index in the 2-d array = count
-                count++;                        // counts ++ to continue the loop and populate the array
+        //creates new 2-d array
+        int[][] a = new int [5][10];
+        // creates a count variable and sets it equal to zero
+        int count=0;
+        // counts up from zero to the length of the array of arrays (4)
+        for(int i=0; i < a.length; i++){
+            // creates a new index sets it equal to zero and less than the (10)
+            for(int j=0; j < a[i].length; j++){
+                // 10 equals the index of a[i]. a[4] has 9 indexes
+                a[i][j] =count;
+                // sets each index in the 2-d array = count
+                count++;
             }
         }
 
-        for(int[] x: a) {                           // for each int array value of x on the vertical axis of a
-            for (int y : x) {                       //for each value of y along the horizontal axis of x
-                System.out.print(y + " ");         // print  that value and add a space
+        // counts ++ to continue the loop and populate the array
+        for(int[] x: a) {
+            // for each int array value of x on the vertical axis of a
+            for (int y : x) {
+                //for each value of y along the horizontal axis of x
+                System.out.print(y + " ");
             }
-            System.out.println();                   // prints a blank line after every iteration
+            // print  that value and add a space
+            System.out.println();
+            // prints a blank line after every iteration
         }
-
 
     }
 

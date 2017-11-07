@@ -16,15 +16,21 @@ public class Exercise_06 {
 
     public static void main(String[] args) {
 
-        Queue test = new Queue(101);                // creates a new Queue object with size 101
+        // creates a new Queue object with size 101
+        Queue test = new Queue(101);
 
-        for(int i=0; i<test.size(); i++){               //populates from 0 to 100
-            test.put(i);                                //puts into queue
+        //populates from 0 to 100
+        for(int i=0; i<test.size(); i++){
+            //puts into queue
+            test.put(i);
         }
 
-        for (int i =0; i <test.size(); i++){          
+        for (int i =0; i <test.size(); i++){
+
             if(i%2==0) {
+
                 System.out.println(test.get());
+
             } else if (i%2 !=0) {
                 test.get();
             }
@@ -33,28 +39,37 @@ public class Exercise_06 {
     }
 
     static class Queue {
-
-        private int[] q;                          //this array holds the q
-        private int putLocation, getLocation;       // the put and get indices
+        //this array holds the q
+        private int[] q;
+        // the put and get indices
+        private int putLocation, getLocation;
 
 
         Queue(int size) {
-            q = new int[size];                     // allocate memory for the queue
+            // allocate memory for the queue
+            q = new int[size];
             putLocation = getLocation = 0;
         }
 
         public void put(int num) {
+
             if (putLocation == q.length) {
+
                 System.out.println("-Queue is full");
+
                 return;
             }
             q[putLocation++] = num;
+
             return;
         }
 
         public int get() {
+
             if (getLocation == putLocation) {
+
                 System.out.println("-Queue is empty");
+
                 return 0;
             }
             return q[getLocation++];

@@ -12,23 +12,25 @@ public class Exercise_02 {
 
     public static void main(String[] strings) {
 
-        int length = 2017;                //create  a new int =17
-        int[] ar = new int[length];     // create a new int array =17
+        //create  a new int = 17
+        int length = 2017;
+        //create a new int array = 17
+        int[] ar = new int[length];
 
+        //index between 0 and 17
+        for (int i=0; i <length;) {
 
-
-        for (int i=0; i <length;) {     //  index between 0 and 17
-
-            ar[i] = ++i;              // populate the array. If it was i++ would populate with even numbers
+            // populate the array. If it was i++ would populate with even numbers
+            ar[i] = ++i;
 
         }
 
-        for (int i = ar.length -1; i >=0; i--) { // sets index equal to the length of the array -1(index)
-            if(i%2 ==0) { //sorts for all index with even numbers, which are the odd number elements
-                System.out.println(ar[i]); //prints the the value of the array at the even number indexes
-
-
-
+        // sets index equal to the length of the array -1(index)
+        for (int i = ar.length -1; i >=0; i--) {
+            //sorts for all index with even numbers, which are the odd number elements
+            if(i%2 ==0) {
+                //prints the the value of the array at the even number indexes
+                System.out.println(ar[i]);
             }
 
         }
