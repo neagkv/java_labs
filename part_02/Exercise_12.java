@@ -32,7 +32,7 @@ public class Exercise_12 {
         double pricePerGal = input.nextDouble();
 
         double totalTripCoast = ((miles/mpg) * pricePerGal);
-        
+
         System.out.println(totalTripCoast);
     }
 }

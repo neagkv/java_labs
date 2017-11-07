@@ -13,71 +13,93 @@ package part_03;
 
  **/
 
-class Herring { //class
 
+//class
 
-    int width; //instance variables
+class Herring {
+
+    //instance variables
+    int width;
     int forkLength;
     int caudaulLength;
 
 
 
-
-    Herring(int w, int fL, int cL) { //constructor
+    //constructor
+    Herring(int w, int fL, int cL) {
 
         width = w;
         forkLength = fL;
         caudaulLength = cL;
     }
 
-    public static void main(String[] args) { //main method .. usually would not construct
-        Herring alewife = new Herring(2, 5, 7); // construct new Herring
+    //main method .. usually would not construct
+    public static void main(String[] args) {
+
+        //construct new Herring objects
+        Herring alewife = new Herring(2, 5, 7);
         Herring blueback = new Herring(2, 6, 8);
         Herring atlantic = new Herring(3, 6, 8);
 
+        //construct a new groundfish object
         Groundfish cod = new Groundfish(3, 5, 8);
+        //set width of the cod object
         cod.width = 7;
+        //set width of the cod object using setters
         cod.setWidth(9);
+        //set the fork length of the cod
         cod.setForkLength(6);
-        //cod.forklength=6; could not run this way because forklength is private
+        //cod.forklength = 6; could not run this way because forklength is private
+
+        //construct a new groundfish object called pollock
         Groundfish pollock = new Groundfish (4, 7);
+
+        //set the caudual length of the pollock
         pollock.setCaudaulLength(8);
 
+        //create a new hake object called hake
         Hakes white = new Hakes (7, 8, 10);
+        //set the width of hake object using getters/setters
         white.setWidth(15);
+        //this will not print anything
         System.out.println(white.getWidth());
-        int a =white.getWidth();
+        //set a = the width of the white Hake object
+        int a = white.getWidth();
+        //print out a
         System.out.println(a);
-
-    }
-
-    int diffInLength() {    //second method
-        return (caudaulLength - forkLength);
     }
 }
 
+//groundfish class
 
-class Groundfish { //class
+class Groundfish {
 
-    int width; //instance variables
+    //instance variables
+    int width;
     private int forkLength;
     int caudaulLength;
+
+    //empty cod constructor
+
     Groundfish(){
-                            //is is also a constructor
+
     }
 
+    //two parameter groundfish constructor
     Groundfish(int width, int forkLength) {
         this.width = width;
         this.forkLength = forkLength;
     }
 
-    Groundfish(int w, int fL, int cL) { //constructor
+    //three parameter groundfish constructor
+    Groundfish(int w, int fL, int cL) {
 
         width = w;
         forkLength = fL;
         caudaulLength = cL;
     }
 
+    //getters/setters
     public int getWidth() {
         return width;
     }
@@ -103,21 +125,26 @@ class Groundfish { //class
     }
 }
 
+
+//hake class
 class Hakes {
 
-
-    private int width; //instance variables
+    //instance variables
+    private int width;
     int forkLength;
     int caudaulLength;
 
 
-    Hakes(int w, int fL, int cL) { //constructor
+    //full hake constructor
+    Hakes(int w, int fL, int cL) {
 
         width = w;
         forkLength = fL;
         caudaulLength = cL;
     }
 
+
+    //getters/setters
     public int getWidth() {
         return width;
     }

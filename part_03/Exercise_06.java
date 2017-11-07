@@ -50,8 +50,5 @@ class Exercise_06 {
             System.out.println((currentClockHour -= 12) + " " + "AM");
 
         }
-
-
-
     }
 }

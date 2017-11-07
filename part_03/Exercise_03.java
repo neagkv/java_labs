@@ -18,10 +18,8 @@ class Exercise_03 {
             int month = 1 + (int) (Math.random() * ((12 - 1) + 1));
             // call getMonthName(int month) and pass your random int
             String monthName = getMonthName(month);
-
             // print the name of the month and the random int generated to the console
             System.out.println(month + " " + monthName);
-
         }
 
     }
@@ -73,9 +71,9 @@ class Exercise_03 {
             default:
                 monthName = "Invalid";
         }
+
         // return the month name
         return monthName;
-
     }
 }
 
