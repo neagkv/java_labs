@@ -1,6 +1,7 @@
 package part_10.trafficLight;
 
 enum TrafficLightColor {
+
     RED(12000), GREEN(10000), YELLOW(2000);
 
     private int delay;

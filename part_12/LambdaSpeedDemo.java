@@ -61,6 +61,7 @@ public class LambdaSpeedDemo {
 }
 
 class InterFaceImpl implements TraditionInterface{
+
     @Override
     public int run(int numLoops) {
         int num = 0;

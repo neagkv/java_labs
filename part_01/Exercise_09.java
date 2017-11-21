@@ -9,6 +9,8 @@ package part_01;
  */
 public class Exercise_09 {
 
+
+
     static double width = 2.4;
     static double height = 6.4;
 
@@ -18,9 +20,9 @@ public class Exercise_09 {
         double area;
         double perimeter;
 
-        System.out.println("Area euqals" + " " + width * height);
-
+        System.out.println("Area euqals" + "" + width * height);
         System.out.println("Perimeter equals" + " " + 2*(width + height));
+
 
     }
 }

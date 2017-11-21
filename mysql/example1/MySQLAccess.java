@@ -4,6 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class MySQLAccess {
+
     private Connection connection = null;
     private Statement statement = null;
     private PreparedStatement preparedStatement = null;

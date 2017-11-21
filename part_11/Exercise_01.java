@@ -38,8 +38,6 @@ public class Exercise_01 <T> {
             System.out.println(x);
         }
     }
-
-
 }
 
 
